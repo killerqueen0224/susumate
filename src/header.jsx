@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Nav,NavDropdown,NavItem,MenuItem } from 'react-bootstrap';
 
-export default class Counter extends React.Component {
+export default class Header extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -19,17 +19,20 @@ export default class Counter extends React.Component {
   render() {
     var style = {
       logo: {
-        background: "url('images/SUSUMATE-logo.png')",
-        height: "45",
-        width: "136"
+        // background: "url('images/logo.png')",
+        // height:"10px",
+        // width:"102px",
+        // display:"block"
+      },
+      navbar: {
+        boxShadow: "0 0 10px"
       }
     }
     return (
-      <Navbar>
+      <Navbar fixedTop style={style.navbar}>
         <Navbar.Header>
           <Navbar.Brand>
-            <a style={style.logo} href="#">
-            </a>
+            <a style={style.logo} href="#">SUSUMATE</a>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>

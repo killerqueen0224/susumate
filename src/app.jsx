@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Counter from './counter.jsx';
+import Container from './container.jsx';
 
 ReactDom.render(
-  <Counter />,
+  <Container />,
   document.getElementById('container')
 );

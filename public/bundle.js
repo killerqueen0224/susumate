@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9fb6608dd11aac504cad"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a0c1a6850d5fe27ff8cf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -585,17 +585,13 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _counter = __webpack_require__(/*! ./counter.jsx */ 159);
+	var _header = __webpack_require__(/*! ./header.jsx */ 159);
 	
-	var _counter2 = _interopRequireDefault(_counter);
+	var _header2 = _interopRequireDefault(_header);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	window.App = {
-	    render: function render() {
-	        _reactDom2.default.render(_react2.default.createElement(_counter2.default, null), document.getElementById('root'));
-	    }
-	};
+	_reactDom2.default.render(_react2.default.createElement(Header, null), document.getElementById('container'));
 
 /***/ },
 /* 1 */
@@ -20674,15 +20670,15 @@
 
 /***/ },
 /* 159 */
-/*!*************************!*\
-  !*** ./src/counter.jsx ***!
-  \*************************/
+/*!************************!*\
+  !*** ./src/header.jsx ***!
+  \************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20701,93 +20697,99 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Counter = function (_Component) {
-	    _inherits(Counter, _Component);
+	var Header = function (_React$Component) {
+	  _inherits(Header, _React$Component);
 	
-	    function Counter() {
-	        _classCallCheck(this, Counter);
+	  function Header() {
+	    _classCallCheck(this, Header);
 	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Counter).call(this));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Header).call(this));
 	
-	        _this.state = {
-	            count: 0
-	        };
-	        return _this;
+	    _this.state = {
+	      count: 0
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Header, [{
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      this.setState({
+	        count: this.state.count + 1
+	      });
 	    }
-	
-	    _createClass(Counter, [{
-	        key: 'handleClick',
-	        value: function handleClick() {
-	            this.setState({
-	                count: this.state.count + 1
-	            });
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var style = {
+	        logo: {
+	          background: "url('images/SUSUMATE-logo.png')",
+	          height: "45",
+	          width: "136"
 	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                _reactBootstrap.Navbar,
-	                null,
-	                _react2.default.createElement(
-	                    _reactBootstrap.Navbar.Header,
-	                    null,
-	                    _react2.default.createElement(
-	                        _reactBootstrap.Navbar.Brand,
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'React-Bootstrap'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    Nav,
-	                    null,
-	                    _react2.default.createElement(
-	                        NavItem,
-	                        { eventKey: 1, href: '#' },
-	                        'Link'
-	                    ),
-	                    _react2.default.createElement(
-	                        NavItem,
-	                        { eventKey: 2, href: '#' },
-	                        'Link'
-	                    ),
-	                    _react2.default.createElement(
-	                        NavDropdown,
-	                        { eventKey: 3, title: 'Dropdown', id: 'basic-nav-dropdown' },
-	                        _react2.default.createElement(
-	                            MenuItem,
-	                            { eventKey: 3.1 },
-	                            'Action'
-	                        ),
-	                        _react2.default.createElement(
-	                            MenuItem,
-	                            { eventKey: 3.2 },
-	                            'Another action'
-	                        ),
-	                        _react2.default.createElement(
-	                            MenuItem,
-	                            { eventKey: 3.3 },
-	                            'Something else here'
-	                        ),
-	                        _react2.default.createElement(MenuItem, { divider: true }),
-	                        _react2.default.createElement(
-	                            MenuItem,
-	                            { eventKey: 3.3 },
-	                            'Separated link'
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
+	      };
+	      return _react2.default.createElement(
+	        _reactBootstrap.Navbar,
+	        null,
+	        _react2.default.createElement(
+	          _reactBootstrap.Navbar.Header,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.Navbar.Brand,
+	            null,
+	            _react2.default.createElement('a', { style: style.logo, href: '#' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Nav,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.NavItem,
+	            { eventKey: 1, href: '#' },
+	            'Link'
+	          ),
+	          _react2.default.createElement(
+	            _reactBootstrap.NavItem,
+	            { eventKey: 2, href: '#' },
+	            'Link'
+	          ),
+	          _react2.default.createElement(
+	            _reactBootstrap.NavDropdown,
+	            {
+	              eventKey: 3,
+	              title: 'Dropdown',
+	              id: 'basic-nav-dropdown' },
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { eventKey: 3.1 },
+	              'Action'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { eventKey: 3.2 },
+	              'Another action'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { eventKey: 3.3 },
+	              'Something else here'
+	            ),
+	            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { eventKey: 3.3 },
+	              'Separated link'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
 	
-	    return Counter;
-	}(_react.Component);
-
-	exports.default = Counter;
+	  return Header;
+	}(_react2.default.Component);
+	
+	exports.default = Header;
 
 /***/ },
 /* 160 */
