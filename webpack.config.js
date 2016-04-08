@@ -21,14 +21,17 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
-    loaders: [{
-      loader: 'babel',
-      exclude: /node_modules/,
-      test: /\.js[x]?$/,
-      query: {
-        cacheDirectory: true,
-        presets: ['react', 'es2015']
+    loaders: [
+      { test: /\.css$/, loaders: ['style-loader','css-loader'] },
+      {
+        loader: 'babel',
+        exclude: /node_modules/,
+        test: /\.js[x]?$/,
+        query: {
+          cacheDirectory: true,
+          presets: ['react', 'es2015']
+        }
       }
-    }]
+    ]
   }
 };

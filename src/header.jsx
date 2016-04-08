@@ -15,7 +15,6 @@ export default class Header extends React.Component {
     });
   }
 
-
   render() {
     var style = {
       logo: {
@@ -23,9 +22,15 @@ export default class Header extends React.Component {
         // height:"10px",
         // width:"102px",
         // display:"block"
+        color: "#30bbfe !important",
+        // backgroundColor: "#d5d5d5",
+        letterSpacing: "-1px",
+        fontSize:"28px",
+        //textShadow: "2px 2px 4px #BBBBBB"
       },
       navbar: {
-        boxShadow: "0 0 10px"
+        boxShadow: "0 0 10px",
+        backgroundColor: "#FFFFFF"
       }
     }
     return (
@@ -35,25 +40,9 @@ export default class Header extends React.Component {
             <a style={style.logo} href="#">SUSUMATE</a>
           </Navbar.Brand>
         </Navbar.Header>
-        <Nav>
+        <Nav pullRight>
           <NavItem eventKey={1} href="#">Link</NavItem>
           <NavItem eventKey={2} href="#">Link</NavItem>
-          <NavDropdown
-            eventKey={3}
-            title="Dropdown"
-            id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1}>Action</MenuItem>
-            <MenuItem eventKey={3.2}>
-              Another action
-            </MenuItem>
-            <MenuItem eventKey={3.3}>
-              Something else here
-            </MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey={3.3}>
-              Separated link
-            </MenuItem>
-          </NavDropdown>
         </Nav>
       </Navbar>
     );
