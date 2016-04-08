@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 
 body {
   font-family: '01フロップデザイン' !important;
 }
+=======
+@font-face {
+  font-family: '01フロップデザイン';
+  src: url('..\font\FlopDesignFONT.otf') format('opentype');
+}
+body {
+  font-family: '01フロップデザイン' !important;
+}
+.retroshadow {
+    color: #2c2c2c;
+    background-color: #d5d5d5;
+    letter-spacing: .05em;
+    text-shadow:
+      4px 4px 0px #d5d5d5,
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+    font-size:40px;
+}
+>>>>>>> 0b0f5bd8e2b0ffaf84f07c18a917c0c92af9ccba
